@@ -1,0 +1,12 @@
+.listWrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.listItem {
+  padding: 5px 0;
+}
+
+.statList {
+  padding-left: 10px;
+}
