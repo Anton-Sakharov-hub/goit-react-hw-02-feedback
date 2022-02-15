@@ -1,4 +1,4 @@
-import s from './Statistic.module.css';
+import {listWrap, listItem, statList} from './Statistic.module.css';
 // import Notification from '../Notifiation';
 
 export default function Statistic (props) {
@@ -6,21 +6,21 @@ export default function Statistic (props) {
     const { good, neutral, bad, total, positiveFeedback } = options;
 
     return(
-        <div className={s.listWrap}>
-            <ul className={s.statList}>
-                <li className={s.listItem}>
+        <div className={listWrap}>
+            <ul className={statList}>
+                <li className={listItem}>
                     Good: {good}
                 </li>
-                <li className={s.listItem}>
+                <li className={listItem}>
                     Neutral: {neutral}
                 </li>
-                <li className={s.listItem}>
+                <li className={listItem}>
                     Bad: {bad}
                 </li >
-                <li className={s.listItem}>
+                <li className={listItem}>
                     Total: {total}
                 </li >
-                <li className={s.listItem}>
+                <li className={listItem}>
                     PositiveFeedback: {positiveFeedback}
                 </li >
             </ul> 
