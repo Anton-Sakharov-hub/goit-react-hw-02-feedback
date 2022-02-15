@@ -1,5 +1,5 @@
 import s from './Statistic.module.css';
-import Notification from '../Notifiation';
+// import Notification from '../Notifiation';
 
 export default function Statistic (props) {
     const { options } = props;
@@ -7,8 +7,7 @@ export default function Statistic (props) {
 
     return(
         <div className={s.listWrap}>
-            <h2>Statistics</h2>
-            {total ? <ul className={s.statList}>
+            <ul className={s.statList}>
                 <li className={s.listItem}>
                     Good: {good}
                 </li>
@@ -24,7 +23,7 @@ export default function Statistic (props) {
                 <li className={s.listItem}>
                     PositiveFeedback: {positiveFeedback}
                 </li >
-            </ul> : <Notification message="There is no feedback"/>}
+            </ul> 
         </div>
     )
 }

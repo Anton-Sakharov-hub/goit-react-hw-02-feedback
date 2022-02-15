@@ -14,18 +14,12 @@ class App extends Component {
     positiveFeedback: 0,
   }
 
-  // feedbackHandler = (options) => {
-  //   this.setState({ ...options });
-  //   console.log(this.state);
-  // }
-
   onLeaveFeedback = (evt) => {
     const { name } = evt.target; 
 
       this.setState(prevState => ({ [name]: prevState[name] + 1 }));
       this.countTotalFeedback();
       this.countPositiveFeedbackPercentage();
-      // this.props.onBtnClick({...this.state})
   }
 
   countTotalFeedback = () => {
@@ -41,17 +35,18 @@ class App extends Component {
 
   }
 
-  render() {
-    // const { good, neutral, bad, total, positiveFeedback } = this.state;
+  checkTotalScore = () => {
+    return Boolean(this.state.total);
+  }
 
+  render() {
     return (
       <div className="App">
         <Section
           onBtnClick={this.onLeaveFeedback}
           options={this.state}
+          hasTotalScore={this.checkTotalScore()}
         />
-        {/* <FeedbackOption onBtnClick={this.onLeaveFeedback}/>
-        <Statistic good={good} neutral={neutral} bad={bad} total={total} positiveFeedback={positiveFeedback}/> */}
       </div>
     );
   }
