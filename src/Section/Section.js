@@ -4,14 +4,14 @@ import FeedbackOption from '../Feedback';
 import Notification from '../Notifiation';
 
 export default function Section(props) {
-    const { onBtnClick, options, hasTotalScore } = props;
+    const { onBtnClick, statisticOptions, hasTotalScore } = props;
 
     return (
         <section>
             <h2>Please leave feedback</h2>
-            <FeedbackOption onBtnClick={onBtnClick} />
+            <FeedbackOption options={['good', 'neutral', 'bad']} onBtnClick={onBtnClick} />
             <h2>Statistics</h2>
-            {hasTotalScore ? <Statistic options={options} /> : <Notification message="There is no feedback" />}
+            {hasTotalScore ? <Statistic options={statisticOptions} /> : <Notification message="There is no feedback" />}
         </section>
     )
 };

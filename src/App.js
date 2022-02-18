@@ -44,7 +44,7 @@ class App extends Component {
       <div className="App">
         <Section
           onBtnClick={this.onLeaveFeedback}
-          options={this.state}
+          statisticOptions={this.state}
           hasTotalScore={this.checkTotalScore()}
         />
       </div>
