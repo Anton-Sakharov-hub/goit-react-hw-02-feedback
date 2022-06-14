@@ -9,7 +9,9 @@ export default function Section(props) {
     return (
         <section>
             <h2>Please leave feedback</h2>
-            <FeedbackOption options={['good', 'neutral', 'bad']} onBtnClick={onBtnClick} />
+            <FeedbackOption 
+            //  options={['good', 'neutral', 'bad']} onBtnClick={onBtnClick} 
+            />
             <h2>Statistics</h2>
             {hasTotalScore ? <Statistic options={statisticOptions} /> : <Notification message="There is no feedback" />}
         </section>
